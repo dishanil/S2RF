@@ -248,20 +248,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            We develop the first method which can add user-specified styles semantically to selected objects in the scene.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            Our method learns the implicit function for selected objects separately such that the specified style can be applied only on the object. Finally, we render the NeRF which contains unique styles for different objects. We utilize state-of-the-art Segmentation model, "Segment Anyhting" which proides the mask for separate classes of objects. Using the masks, we apply distinct NNFM Style loss selected for the specific object class. While performing our experimentations, we observed that subsampling the mask in order to extract the object features from the VGG feature space leads to boundary artifacts as the style loss applies to a larger area than the original mask owing to the receptive field of the model. In order to circumvent this, we work with the mask in the image space itself. The quality of the rendering depends heavily on the segmentation masks of the objects. As the SAM is very accurate at producing refined segmentation masks for objects, we do not really run into many issues pertaining this. Thus, we are able to produce high-quality and high fidelity renderings with specific objects being styled the way an user would want. Based on our experiments, our method has proven to be robust and scales well to increasing number of objects and styles. 
           </p>
           <p>
             We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
