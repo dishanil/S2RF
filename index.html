@@ -95,7 +95,7 @@
             <span class="author-block">
               <a href="">Moneish Kumar</a>,</span>
             <span class="author-block">
-              <a href="">Neeraj Panse</a>,
+              <a href="">Neeraj Panse</a>
             </span>
 <!--             <span class="author-block">
               <a href="">Rupanjali Kukal</a>
@@ -173,7 +173,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We develop a novel method which can add user-specified styles semantically to selected objects in the scene.
+            We develop a novel method which can add user-specified styles to selected objects in the scene.
           </p>
           <p>
             Our method learns the implicit function for selected objects separately such that the specified style can be applied only on those objects. Finally, we render the NeRF which contains unique styles for different objects. We utilize state-of-the-art Segmentation model, <a href="https://github.com/facebookresearch/segment-anything">Segment Anything</a> which provides the mask for separate classes of objects. Using the masks, we apply distinct NNFM Style loss selected for the specific object class. 
@@ -191,7 +191,7 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf"> S2NeRF can help style all objects belonging to a class in the scene based on any given style. 
+        <span class="dnerf"> S2NRF can help style all objects belonging to a class in the scene based on any given style. 
       </h2>
 
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -205,7 +205,14 @@
   </div>
 </section>
 
-
+<div class="video-container">
+    <video controls>
+         <source src="./static/videos/room_table141_chair15.mp4"
+                    type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+    
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -246,7 +253,7 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Improvements</h2>
+        <h2 class="title is-3"></h2>
         <div class="content has-text-justified">
           <p>
             We used Nearest Neighbor Feature Matching (NNFM) loss besides using Gram loss in order to train our radiance fields. Thus, we achieve higher quality renderings.
