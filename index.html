@@ -333,29 +333,54 @@
       </div>
     </section>
     
+#wrapper { 
+    width: 920px; 
+    height: auto; 
+    margin: 0 auto;
+} 
+#home1 { 
+    width: 47.5%; 
+    height: 300px; 
+    float: left; 
+    margin-right: 5%;
+} 
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="200%">
-            <source src="./static/videos/GRAMVSNNFM.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
+#home2 { 
+    width: 47.5%; 
+    height: 300px; 
+    float: left; 
+}
 
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="200%">
-            <source src="./static/videos/mask_scale.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-</section>
+.clear{
+    clear: both;
+}
+
+@media (max-width:767px) {
+    #wrapper{
+        width: 100%;
+        height: auto;
+    }
+    #home1 {
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+    #home2 {
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+}
+    
+<div id="wrapper"> 
+    <video id="home1" width="400" height="300" poster="images/video.jpg" controls="controls" preload="none"> 
+        <source type="video/mp4" src="./static/videos/mask_scale.mp4" /> 
+    </video>
+    <video id="home2" width="400" height="300" poster="images/video.jpg" controls="controls" preload="none"> 
+        <source type="video/mp4" src="./static/videos/mask_scale.mp4" /> 
+    </video>
+    <div class="clear"></div> 
+</div>
 
 
 
